@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+    font-family: "Anek Malayalam", sans-serif;
+}
+
+.ui {
+    bottom: 48px;
+    right: 48px;
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+svg {
+    width: 10vw;
+    animation: dash 3s linear infinite;
+}
+
+span {
+    font-size: 20px;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 200;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
