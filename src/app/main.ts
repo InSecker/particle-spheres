@@ -53,7 +53,6 @@ for (let i = 0; i < 2000; i++) {
         new Particle(
             getRandomNumber(centerX - 150, centerX + 150),
             getRandomNumber(centerY - 150, centerY + 150),
-            getRandomNumber(2, 3),
             Math.min(width, height)
         )
     );

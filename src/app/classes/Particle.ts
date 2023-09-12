@@ -10,14 +10,14 @@ export class Particle {
     color: string;
     bound: number;
 
-    constructor(x: number, y: number, radius: number, sphereRadius: number) {
+    constructor(x: number, y: number, sphereRadius: number) {
         this.x = x;
         this.y = y;
         this.velX = Math.random() - 0.5;
         this.velY = Math.random() - 0.5;
         this.radius = getRandomNumber(1, 2);
         this.color = "rgba(255,255,255,0.6)";
-        this.bound = sphereRadius / 2 - 100;
+        this.bound = Math.min(sphereRadius / 2 - 100, 350);
     }
 
     update(newBound: number) {
