@@ -1,25 +1,71 @@
 body {
     overflow: hidden;
     font-family: "Anek Malayalam", sans-serif;
+
+    text-transform: uppercase;
+    background: black;
+}
+.ui {
+    position: absolute;
+    top: 16px;
+    right: 16px;
 }
 
-.ui {
-    bottom: 48px;
-    right: 48px;
-    position: absolute;
+.ui,
+.mobile {
+    padding: 16px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.4);
+    border: rgba(255, 255, 255, 0.8) 1px solid;
+}
+
+.mobile {
+    display: none;
+}
+
+.programs {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
+.button {
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 4px;
+    background: white;
+    color: black;
+}
+
+.follow-cursor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    background-color: white;
+}
+
 svg {
-    width: 10vw;
+    width: 5vw;
     animation: dash 3s linear infinite;
 }
 
 span {
     font-size: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 @keyframes dash {
@@ -28,5 +74,32 @@ span {
     }
     100% {
         stroke-dashoffset: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mobile {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        right: 16px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+
+        transform: translateY(-50%);
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ui,
+    canvas {
+        display: none;
     }
 }
