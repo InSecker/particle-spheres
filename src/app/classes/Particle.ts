@@ -21,7 +21,7 @@ export class Particle {
     }
 
     update(newBound: number) {
-        this.bound = newBound / 2 - 100;
+        this.bound = Math.min(newBound / 2 - 100, 350);
     }
 
     gravity(
